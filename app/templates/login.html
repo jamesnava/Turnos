@@ -1,0 +1,35 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+<div id="divlogueo">
+	
+	<form action="" method="post" novalidate>
+		{{form.hidden_tag()}}
+		<p>
+		{{form.usuario.label}} <br>
+		{{form.usuario()}}
+		<br>
+		{%for error in form.usuario.errors%}
+		<span style="color: red;">{{error}}</span>
+		{%endfor%}
+
+		</p>
+		<p>
+		{{form.contrasenia.label}} <br>
+		{{form.contrasenia()}}
+		<br>
+		{%for error in form.contrasenia.errors%}
+		<span style="color: red;">{{error}}</span>
+		{%endfor%}
+		</p>
+		<p>
+			{{form.check_recordar()}} {{ form.check_recordar.label}}
+		</p>
+		<p>
+			{{form.submit()}}
+		</p>
+
+	</form>
+</div>
+{%endblock%}
