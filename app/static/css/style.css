@@ -1,20 +1,16 @@
-#divlogueo{
+#divlogueo{	
+	width: 100%;
 	
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 30%;
-	height: 50%;
-	margin: auto;
+	text-align: center;
 	
-	border: 2px solid blue;
-	border-radius: 5px;
-
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#divlogueo form{
+	background-color: rgba(0, 0, 0, .3);	
+	position: absolute;
+	margin-top: 20px;
+	width: 50%;
+	left: 25%;
 }
+
+
