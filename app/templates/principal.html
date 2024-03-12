@@ -1,5 +1,17 @@
 {%extends "base.html"%}
 
 {%block content%}
-<h1>hola bienvenido</h1>
+<button class="btn btn-success mx-3 mt-3" data-bs-toggle="offcanvas" data-bs-target="#intro">Presiona aquí</button>
+<div class="offcanvas offcanvas-start" id="intro">
+	<div class="offcanvas-header">
+		<div class="offcanvas-title">
+			<button class="btn btn-danger" data-bs-dismiss="offcanvas"></button>
+		</div>
+	</div>
+	<div class="offcanvas-body">
+		<p>lorem</p>
+		<p>lorem</p>
+		<p>lorem</p>
+	</div>
+</div>
 {%endblock%}
