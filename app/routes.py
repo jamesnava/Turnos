@@ -13,6 +13,10 @@ def index():
 
 	return render_template("login.html",form=form)
 
-@app.route("/principal")
-def principal():
-	return render_template("principal.html")
+@app.route("/prgr")
+def programacion():
+	return render_template("programacion.html")
+
+@app.route("/config")
+def configuracion():
+	return render_template("configuracion.html")

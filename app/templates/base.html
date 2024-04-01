@@ -7,6 +7,9 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menu.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/config-menu.css') }}">
+
+
 </head>
 <body>
 	{%with messages=get_flashed_messages()%}
@@ -18,20 +21,73 @@
 	</ul>
 	{%endif%}
 	{%endwith%}
-	<div>
-		<a href="{{url_for('principal')}}">Home</a>
-		<a href="{{url_for('index')}}">Login</a>
+
+
+	<div id="sidemenu" class="menu-collapsed">
+		<div id="header">
+			<div id="title">
+				<span>HSRA AND </span>
+			</div>
+				<div id="menu-btn">
+					<div class="btn-hamburger"></div>
+					<div class="btn-hamburger"></div>
+					<div class="btn-hamburger"></div>
+				</div>
+			
+		</div>
+		<div id="profile">
+			<div id="photo">
+				<img src="{{url_for('static',filename='img/loghsra.png')}}" alt="">
+				<div id="name">
+					<span>Usuario</span>
+				</div>
+			</div>
+		</div>
+		<div id="menu-items">
+			<div class="item">
+				<a href="{{url_for('configuracion')}}">
+					<div class="icon"><img src="{{url_for('static',filename='img/icon/setting.png')}}"></div>
+					<div class="title"><span>Configuracion</span></div>
+				</a>
+			</div>
+			<div class="item separator"></div>
+			<div class="item">
+				<a href="{{url_for('programacion')}}">
+					<div class="icon"><img src="{{url_for('static',filename='img/icon/programacion.png')}}"></div>
+					<div class="title"><span>Programacion</span></div>
+				</a>
+			</div>
+			<div class="item separator"></div>
+			<div class="item">
+				<a href="#">
+					<div class="icon"><img src="{{url_for('static',filename='img/icon/setting.png')}}"></div>
+					<div class="title"><span>Servicios</span></div>
+				</a>
+			</div>
+			<div class="item separator"></div>
+			<div class="item">
+				<a href="#">
+					<div class="icon"><img src="{{url_for('static',filename='img/icon/setting.png')}}"></div>
+					<div class="title"><span>Servicios</span></div>
+				</a>
+			</div>
+			<div class="item separator"></div>
+		</div>
+
+
 	</div>
 	
-	
-	{%block content%}
-	{%endblock%}
-	
+	<div id="main-container">
+		 {%block content%}
 
 
+	  	{%endblock%}
+	</div>
+    
+     	
 
-	
 
+<script src="{{ url_for('static', filename='js/men.js') }}"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </body>
 </html>
